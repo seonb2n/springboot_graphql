@@ -1,0 +1,28 @@
+type Content {
+  contentId: String!
+  contentTitle: String!
+  contentBody: String
+  commentList: [Comment]
+}
+
+type Comment {
+  commentId: String!
+  commentBody: String
+}
+
+type Query {
+  contentList: [Content]
+}
+
+extend type Query {
+  commentList: [Comment]
+}
+
+type Mutation {
+  writeContent(title: String!, body: String): Int
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

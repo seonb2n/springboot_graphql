@@ -1,0 +1,10 @@
+package com.sbkim.springboot_graphql.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+@EnableJpaAuditing
+@Configuration
+public class JpaConfig {
+
+}
