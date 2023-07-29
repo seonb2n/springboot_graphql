@@ -1,0 +1,7 @@
+query {
+    getContent(contentId: 2) {
+        contentId
+        contentTitle
+        contentBody
+    }
+}

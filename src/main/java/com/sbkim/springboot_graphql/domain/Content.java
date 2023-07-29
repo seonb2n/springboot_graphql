@@ -17,7 +17,7 @@ public class Content extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long contentId;
+    private int contentId;
 
     private String contentTitle;
 
