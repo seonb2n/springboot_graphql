@@ -23,4 +23,9 @@ public class RootQueryResolver implements GraphQLQueryResolver {
     public List<Comment> getCommentList() {
         return commentRepository.findAll();
     }
+
+
+    public Content getContent(int contentId) {
+        return contentRepository.findById(contentId).orElseThrow();
+    }
 }

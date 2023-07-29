@@ -1,17 +1,18 @@
 type Content {
-  contentId: String!
+  contentId: Int!
   contentTitle: String!
   contentBody: String
   commentList: [Comment]
 }
 
 type Comment {
-  commentId: String!
+  commentId: Int!
   commentBody: String
 }
 
 type Query {
   contentList: [Content]
+  getContent(contentId: Int): Content
 }
 
 extend type Query {
