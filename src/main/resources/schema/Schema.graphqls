@@ -11,12 +11,8 @@ type Comment {
 }
 
 type Query {
-  contentList: [Content]
+  getContentList: [Content]
   getContent(contentId: Int): Content
-}
-
-extend type Query {
-  commentList: [Comment]
 }
 
 type Mutation {

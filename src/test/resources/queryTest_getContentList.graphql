@@ -1,5 +1,5 @@
 query {
-    content {
+    getContentList {
         contentId
         contentBody
         contentTitle

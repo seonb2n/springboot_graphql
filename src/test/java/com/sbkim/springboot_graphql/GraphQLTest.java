@@ -56,7 +56,7 @@ public class GraphQLTest {
 
         // when
         GraphQLResponse response = graphQLTestTemplate.postForResource(
-            "queryTest_commentList.graphql");
+            "queryTest_getContentList.graphql");
 
         // then
         System.out.println(response.readTree().toString());
@@ -69,15 +69,17 @@ public class GraphQLTest {
 
         //when
         GraphQLResponse response = graphQLTestTemplate.postForResource(
-            "queryTest_commentList.graphql");
+            "queryTest_getContentList.graphql");
 
         //then
         assertTrue(response.isOk());
-        assertEquals("1", response.get("$.data.contentList[0].contentId"));
-        assertEquals(contentTitle1, response.get("$.data.contentList[0].contentTitle"));
-        assertEquals(contentBody1, response.get("$.data.contentList[0].contentBody"));
-        assertEquals("1", response.get("$.data.contentList[0].commentList[0].commentId"));
-        assertEquals(commentBody, response.get("$.data.contentList[0].commentList[0].commentBody"));
+        System.out.println(response.readTree().toString());
+        assertEquals("1", response.get("$.data.getContentList[0].contentId"));
+        assertEquals(contentTitle1, response.get("$.data.getContentList[0].contentTitle"));
+        assertEquals(contentBody1, response.get("$.data.getContentList[0].contentBody"));
+        assertEquals("1", response.get("$.data.getContentList[0].commentList[0].commentId"));
+        assertEquals(commentBody,
+            response.get("$.data.getContentList[0].commentList[0].commentBody"));
     }
 
     @DisplayName("GraphQL 의 응답 결과가 예상과 맞는지 확인한다. - Content")
@@ -86,7 +88,7 @@ public class GraphQLTest {
 
         //when
         GraphQLResponse response = graphQLTestTemplate.postForResource(
-            "queryTest_commentList.graphql");
+            "queryTest_getContent.graphql");
 
         //then
         System.out.println(response.readTree().toString());
