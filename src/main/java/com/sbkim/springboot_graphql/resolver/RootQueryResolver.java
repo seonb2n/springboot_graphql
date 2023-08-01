@@ -1,6 +1,5 @@
 package com.sbkim.springboot_graphql.resolver;
 
-import com.sbkim.springboot_graphql.domain.Comment;
 import com.sbkim.springboot_graphql.domain.Content;
 import com.sbkim.springboot_graphql.repository.CommentRepository;
 import com.sbkim.springboot_graphql.repository.ContentRepository;
@@ -20,10 +19,9 @@ public class RootQueryResolver implements GraphQLQueryResolver {
         return contentRepository.findAll();
     }
 
-    public List<Comment> getCommentList() {
-        return commentRepository.findAll();
-    }
-
+//    public List<Comment> commentList() {
+//        return commentRepository.findAll();
+//    }
 
     public Content getContent(int contentId) {
         return contentRepository.findById(contentId).orElseThrow();
