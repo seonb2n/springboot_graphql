@@ -36,8 +36,12 @@
       <version>15.0.0</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-graphql</artifactId>
+    </dependency>
 
-<!--    frontend 로 jquery + mustache 사용-->
+    <!--    frontend 로 jquery + mustache 사용-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-mustache</artifactId>
