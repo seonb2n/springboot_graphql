@@ -40,7 +40,12 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-graphql</artifactId>
     </dependency>
-
+    <!-- MQ Consumer 로 Celery 사용 -->
+    <dependency>
+      <groupId>com.geneea.celery</groupId>
+      <artifactId>celery-java</artifactId>
+      <version>1.10.4</version>
+    </dependency>
     <!--    frontend 로 jquery + mustache 사용-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -51,7 +56,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-<!--    postgresql driver-->
+    <!--    postgresql driver-->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
